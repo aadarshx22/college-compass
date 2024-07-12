@@ -1,6 +1,9 @@
-
 const Layout = ({ children } : {children :React.ReactNode}) => {
-    <div className="flex-center min-h-screen w-full bg-primary-50 bg-cover bg-center bg-fixed bg-dotted-pattern">
+    return (
+        <div className="flex-center min-h-screen w-full bg-primary-50 bg-cover bg-center bg-fixed bg-dotted-pattern">
         {children}
-    </div>
+        </div>
+    )
 }
+
+export default Layout;

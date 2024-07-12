@@ -14,17 +14,17 @@ function Header() {
             alt="Logo"/>
             </Link>
             
-            {/* <SignedIn > */}
+            <SignedIn >
               <nav className="md:flex-between hidden w-full max-w-xs">
                 <NavItem />
               </nav>
-            {/* </SignedIn> */}
+            </SignedIn>
 
             <div className="flex w-32 justify-end gap-3 items-center" >
-              {/* <SignedIn> */}
-                <UserButton afterSignOutUrl="/"></UserButton>
+              <SignedIn>
+                <UserButton></UserButton>
                 <MobileNav />
-              {/* </SignedIn> */}
+              </SignedIn>
               <SignedOut>
               <Button asChild className="rounded-full" size="lg">
                 <Link href="/sign-in">
