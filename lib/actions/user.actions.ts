@@ -3,7 +3,7 @@
 import { revalidatePath } from 'next/cache'
 
 // import Order from '@/lib/database/models/order.model'
-import Event from '@/lib/mongodb/models/events.model'
+import Event from '@/lib/mongodb/models/event.model'
 
 import { CreateUserParams, UpdateUserParams } from "@/types"
 import { handleError } from "../utils"
@@ -63,7 +63,7 @@ export async function getUserById(userId: string) {
       await Promise.all([
         // Update the 'events' collection to remove references to the user
         Event.updateMany(
-          { _id: { $in: userToDelete.events } },
+          { _id: { $in: userToDelete.events} },
           { $pull: { organizer: userToDelete._id } }
         ),
   
